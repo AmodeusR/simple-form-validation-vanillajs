@@ -5,5 +5,11 @@
   "main": "index.html",
   "repository": "www.github.com/amodeusr/simple-form-validation",
   "author": "Amodeus R.",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "watch": "sass -w scss/main.scss:css/main.css"
+  },
+  "dependencies": {
+    "sass": "^1.49.8"
+  }
 }

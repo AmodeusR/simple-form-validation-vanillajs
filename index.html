@@ -20,11 +20,17 @@
     <form class="simple-form">
       <div class="input-container">
         <label class="input-labels" for="username">Username</label>
-        <input class="input-fields" type="text" id="username" placeholder="Name used to login" data-username>
+        <input class="input-fields" type="text" id="username" placeholder="Name used to login" data-username="username">
+        <ion-icon name="alert-circle" class="input-icons alert"></ion-icon>
+        <ion-icon name="checkmark-circle" class="input-icons checkmark"></ion-icon>
+        <p class="input-alert-text">Username needs to be at least 5 characters long.</p>
       </div>
       <div class="input-container">
         <label class="input-labels" for="Password">Password</label>
-        <input class="input-fields" type="password" id="password" placeholder="At least 8 characters" data-password>
+        <input class="input-fields" type="password" id="password" placeholder="At least 8 characters" data-password="password">
+        <ion-icon name="alert-circle" class="input-icons alert"></ion-icon>
+        <ion-icon name="checkmark-circle" class="input-icons checkmark"></ion-icon>
+        <p class="input-alert-text">Password needs to be at least 8 characters long.</p>
       </div>
       <button class="button" type="submit">Create account</button>
     </form>

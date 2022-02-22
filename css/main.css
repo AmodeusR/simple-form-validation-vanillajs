@@ -1,5 +1,5 @@
-:export {
-  input: #343434;
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  width: min(20rem, 60%);
+  width: min(23rem, 85%);
   margin-inline: auto;
   background: white;
   padding: 2rem;
@@ -21,6 +21,7 @@ body {
 }
 
 .container__header {
+  text-align: center;
   color: #333;
   margin: 0 0 2rem;
 }
@@ -33,7 +34,6 @@ body {
 
 .input-container {
   position: relative;
-  display: flex;
 }
 
 .input-labels {
@@ -50,10 +50,10 @@ body {
 }
 
 .input-fields {
-  width: 100%;
   position: relative;
+  width: 100%;
   outline: none;
-  padding: 0.5rem 0.4rem;
+  padding: 0.8rem 0.4rem;
   border: 1.9px solid #343434;
   border-radius: 3px;
   outline-width: 0.2rem;
@@ -65,6 +65,37 @@ body {
 
 ::placeholder {
   color: #94a0b8;
+}
+
+.input-icons {
+  display: none;
+  position: absolute;
+  font-size: 1.4rem;
+  right: 5px;
+  top: 50%;
+  margin-top: -0.7rem;
+}
+.input-icons.show {
+  display: block;
+}
+.input-icons.alert {
+  color: crimson;
+  margin-top: -30px;
+}
+.input-icons.checkmark {
+  color: mediumseagreen;
+}
+
+.input-alert-text {
+  margin: 0;
+  display: none;
+  color: crimson;
+  font-size: 0.8rem;
+  bottom: -2rem;
+  left: 8px;
+}
+.input-alert-text.show {
+  display: block;
 }
 
 .button {

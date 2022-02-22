@@ -1,5 +1,8 @@
 @use "./functions" as fn;
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -11,7 +14,7 @@ body {
 }
 
 .container {
-  width: min(20rem, 60%);
+  width: min(23rem, 85%);
   margin-inline: auto;
   background: fn.getColor("background-clr");
   padding: 2rem;
@@ -20,6 +23,7 @@ body {
 }
 
 .container__header {
+  text-align: center;
   color: #333;
   margin: 0 0 2rem;
 }
@@ -32,7 +36,6 @@ body {
 
 .input-container {
   position: relative;
-  display: flex;
 }
 
 .input-labels {
@@ -50,10 +53,10 @@ body {
 }
 
 .input-fields {
-  width: 100%;
   position: relative;
+  width: 100%;
   outline: none;
-  padding: .5rem .4rem;
+  padding: .8rem .4rem;
   border: 1.9px solid fn.getColor(input);
   border-radius: 3px;
   outline-width: .2rem;
@@ -69,6 +72,43 @@ body {
 ::placeholder {
   color:hsl(219, 20%, 65%);
 }
+
+.input-icons {
+  display: none;
+  position: absolute;
+  font-size: 1.4rem;
+  right: 5px;
+  top: 50%;
+  margin-top: -.7rem;
+
+  &.show {
+    display: block;
+  }
+
+  &.alert {
+    color: fn.getColor(danger);
+    margin-top: -30px;
+  }
+
+  &.checkmark {
+    color: fn.getColor(success);
+  }
+}
+
+.input-alert-text {
+  margin: 0;
+
+  display: none;
+  color: fn.getColor(danger);
+  font-size: .8rem;
+  bottom: -2rem;
+  left: 8px;
+
+  &.show {
+    display: block;
+  }
+}
+
 
 .button {
   $transition-time: 250ms;
