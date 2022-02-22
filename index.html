@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Input Validation</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2 class="container__header">Create your account</h2>
+    <form class="simple-form">
+      <div class="input-container">
+        <label class="input-labels" for="username">Username</label>
+        <input class="input-fields" type="text" id="username" placeholder="Name used to login" data-username>
+      </div>
+      <div class="input-container">
+        <label class="input-labels" for="Password">Password</label>
+        <input class="input-fields" type="password" id="password" placeholder="At least 8 characters" data-password>
+      </div>
+      <button class="button" type="submit">Create account</button>
+    </form>
+  </div>
+</body>
+</html>

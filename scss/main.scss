@@ -1,0 +1,106 @@
+@use "./functions" as fn;
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;  
+  background: fn.getColor("primary-clr");
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(20rem, 60%);
+  margin-inline: auto;
+  background: fn.getColor("background-clr");
+  padding: 2rem;
+  border-radius: 9px;
+  transform: scale(1.1);
+}
+
+.container__header {
+  color: #333;
+  margin: 0 0 2rem;
+}
+
+.simple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+}
+
+.input-labels {
+  position: absolute;
+  z-index: 1;
+  top: -12px;
+  left: 10px;
+  background: fn.getColor(background-clr);
+
+  color: fn.getColor(input);
+  font-size: .9rem;
+  font-weight: bolder;
+  padding: 0 .4rem;
+  transition: color 250ms ease;
+}
+
+.input-fields {
+  width: 100%;
+  position: relative;
+  outline: none;
+  padding: .5rem .4rem;
+  border: 1.9px solid fn.getColor(input);
+  border-radius: 3px;
+  outline-width: .2rem;
+  transition: border 250ms ease;
+
+  &:focus,
+  &:active {
+    border-color: fn.getColor(primary-clr);
+  }
+
+}
+
+::placeholder {
+  color:hsl(219, 20%, 65%);
+}
+
+.button {
+  $transition-time: 250ms;
+
+  margin-top: 1rem;
+  padding-block: .8rem;
+  border: none;
+  border: 3px solid fn.getColor("primary-clr");
+  background: fn.getColor(background-clr);
+
+  font-size: 1rem;
+  color: fn.getColor(primary-clr);
+  font-weight: bold;
+  transition:
+    background $transition-time ease,
+    color $transition-time ease,
+    border-color $transition-time ease;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    background: fn.getColor(primary-clr);
+    color: white;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active {
+    transition:
+      background 50ms,
+      border-color 50ms;
+    background: fn.getColor(primary-clr-dark);
+    border-color: fn.getColor(primary-clr-dark);
+  }
+}

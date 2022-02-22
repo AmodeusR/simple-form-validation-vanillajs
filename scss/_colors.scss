@@ -1,0 +1,12 @@
+$colors: (
+  "primary-clr": royalblue,
+  "primary-clr-dark": hsl(220, 70%, 42%),
+  "background-clr": white,
+  "danger": crimson,
+  "alert": orange,
+  "input": #343434
+);
+
+:export {
+  input: map-get($colors, input)
+}

@@ -1,0 +1,94 @@
+:export {
+  input: #343434;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: royalblue;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(20rem, 60%);
+  margin-inline: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 9px;
+  transform: scale(1.1);
+}
+
+.container__header {
+  color: #333;
+  margin: 0 0 2rem;
+}
+
+.simple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+}
+
+.input-labels {
+  position: absolute;
+  z-index: 1;
+  top: -12px;
+  left: 10px;
+  background: white;
+  color: #343434;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  padding: 0 0.4rem;
+  transition: color 250ms ease;
+}
+
+.input-fields {
+  width: 100%;
+  position: relative;
+  outline: none;
+  padding: 0.5rem 0.4rem;
+  border: 1.9px solid #343434;
+  border-radius: 3px;
+  outline-width: 0.2rem;
+  transition: border 250ms ease;
+}
+.input-fields:focus, .input-fields:active {
+  border-color: royalblue;
+}
+
+::placeholder {
+  color: #94a0b8;
+}
+
+.button {
+  margin-top: 1rem;
+  padding-block: 0.8rem;
+  border: none;
+  border: 3px solid royalblue;
+  background: white;
+  font-size: 1rem;
+  color: royalblue;
+  font-weight: bold;
+  transition: background 250ms ease, color 250ms ease, border-color 250ms ease;
+  border-radius: 3px;
+}
+.button:hover, .button:focus {
+  background: royalblue;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.button:active {
+  transition: background 50ms, border-color 50ms;
+  background: #2052b6;
+  border-color: #2052b6;
+}
+
+/*# sourceMappingURL=main.css.map */

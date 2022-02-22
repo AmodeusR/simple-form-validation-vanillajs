@@ -1,0 +1,9 @@
+{
+  "name": "simple-form-validation",
+  "version": "1.0.0",
+  "description": "A simple form validation",
+  "main": "index.html",
+  "repository": "www.github.com/amodeusr/simple-form-validation",
+  "author": "Amodeus R.",
+  "license": "MIT"
+}

@@ -1,0 +1,5 @@
+@use "./colors" as clr;
+
+@function getColor($color) {
+  @return map-get(clr.$colors, $color);
+}
